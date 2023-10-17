@@ -19,28 +19,32 @@
     <main>
         <input type="text" name="keyWord" id="keyWord" placeholder="PALAVRA-CHAVE">
 
-        <div id="repositionLine">
+        <div class="opcional">
             <span>Opcional</span>
             <input type="text" name="repositionKey" id="repositionKey" placeholder="CHAVE DE REPOSIÇÃO">
         </div>
 
-        <div class="withLabels">
+        <div id="withLabels">
             <label for="caractersNumber">
                 NÚMERO DE CARACTERES:
-                <input type="number" name="caractersNumber" id="caractersNumbers" autocomplete="off">
+                <input class="smallInput" type="number" name="caractersNumber" id="caractersNumbers" min="1" autocomplete="off">
             </label>
 
             <label for="specialCaracter">
                 CARACTERE ESPECIAL:
-                <input type="text" name="specialCaracter" id="specialCaracter" autocomplete="off">
+                <div class="opcional">
+                    <span>Opcional</span>
+                    <input class="smallInput" type="text" name="specialCaracter" id="specialCaracter" maxlength="1" autocomplete="off">
+                </div>
             </label>
         </div>
 
         <div id="results">
-            <p id="result"><i class="fa-regular fa-copy"></i></p>
+            <p id="result">Sbhdet4vdtyl8td-</p>
+            <i class="fa-regular fa-copy"></i>
         </div>
 
-        <button>GERAR</button>
+        <button id="generate">GERAR</button>
     </main>
 
     <script src="https://kit.fontawesome.com/236858bdbb.js" crossorigin="anonymous"></script>

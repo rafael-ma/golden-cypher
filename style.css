@@ -6,6 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font);
+    font-size: 13px;
+    /* outline: 2px solid red; */
 }
 
 :root {
@@ -40,4 +42,109 @@
     --innerShadow2: #2b2b2b0d;
     --innerGlimmer: #ffffff40;
     --dropShadow: #2b2b2b1a;
+}
+
+header {
+    margin: 38px 38px 66px 38px;
+    gap: 38px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#switch {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    height: 40px;
+    width: 76px;
+    border-radius: 25px;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    border-radius: 50%;
+}
+
+header h1 {
+    width: 100%;
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: var(--headerFont);
+    word-spacing: 6px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    max-width: 300px;
+    width: 80vw;
+    margin: auto;
+}
+
+input {
+    height: 40px;
+    padding: 12px;
+    border-radius: 16px;
+}
+
+::-webkit-input-placeholder {
+    
+}
+
+.opcional {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.opcional span {
+    padding: 0 12px;
+    position: absolute;
+    top: -17px;
+    left: 0;
+}
+
+#withLabels {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.smallInput {
+    max-width: 130px;
+    width: 30vw;
+}
+
+#results {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 24px 0;
+}
+
+#results p, i{
+    font-size: 1.8rem;
+}
+
+#generate {
+    height: 60px;
+    font-size: 1.8rem;
+    border-radius: 24px;
+    letter-spacing: .5rem;
 }
