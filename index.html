@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Golden Cypher</title>
+</head>
+<body class="">
+    <header>
+        <div id="switch">
+            <button></button>
+        </div>
+        <h1>
+            Golden Cypher
+        </h1>
+    </header>
+
+    <main>
+        <input type="text" name="keyWord" id="keyWord" placeholder="PALAVRA-CHAVE">
+
+        <div id="repositionLine">
+            <span>Opcional</span>
+            <input type="text" name="repositionKey" id="repositionKey" placeholder="CHAVE DE REPOSIÇÃO">
+        </div>
+
+        <div class="withLabels">
+            <label for="caractersNumber">
+                NÚMERO DE CARACTERES:
+                <input type="number" name="caractersNumber" id="caractersNumbers" autocomplete="off">
+            </label>
+
+            <label for="specialCaracter">
+                CARACTERE ESPECIAL:
+                <input type="text" name="specialCaracter" id="specialCaracter" autocomplete="off">
+            </label>
+        </div>
+
+        <div id="results">
+            <p id="result"><i class="fa-regular fa-copy"></i></p>
+        </div>
+
+        <button>GERAR</button>
+    </main>
+
+    <script src="https://kit.fontawesome.com/236858bdbb.js" crossorigin="anonymous"></script>
+</body>
+</html>

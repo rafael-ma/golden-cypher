@@ -1,0 +1,43 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Berkshire+Swash&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+:root {
+    --font: 'Basic', sans-serif;
+    --headerFont: 'Berkshire Swash', serif;
+
+    --constrastColor: #ff762a;
+    --background: #2b2b2b;
+
+    --input: #ededed40;
+
+    --fontColor: #ededed;
+    --placehoder: #edededbf;
+    --instruction: #ededed80;
+
+    --innerShadow: #00000033;
+    --innerShadow2: #0000001a;
+    --innerGlimmer: #ededed40;
+    --dropShadow: #0000001a;
+}
+
+.light {
+    --background: #ededed;
+
+    --input: #2b2b2b1a;
+
+    --fontColor: #2b2b2b;
+    --placehoder: #2b2b2b1a9;
+    --instruction: #2b2b2b80;
+
+    --innerShadow: #2b2b2b33;
+    --innerShadow2: #2b2b2b0d;
+    --innerGlimmer: #ffffff40;
+    --dropShadow: #2b2b2b1a;
+}
