@@ -46,7 +46,6 @@
 
 header {
     margin: 38px 38px 66px 38px;
-    gap: 38px;
 
     display: flex;
     flex-direction: column;
@@ -61,6 +60,7 @@ header {
     height: 40px;
     width: 76px;
     border-radius: 25px;
+    margin-bottom: 38px;
 }
 
 #switch button {
@@ -143,8 +143,60 @@ label {
 }
 
 #generate {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
     height: 60px;
     font-size: 1.8rem;
     border-radius: 24px;
     letter-spacing: .5rem;
+}
+
+/* Media Query for Desktoip */
+@media (min-width: 768px) {
+    header {
+        margin: 38px 38px 88px 38px;
+    
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header h1 {
+        width: initial;
+    }
+    
+    #switch {
+        margin: 0;
+    }
+
+    #space {
+        height: 40px;
+        width: 76px;
+    }
+
+    main {
+        max-width: 600px;
+        width: 80vw;
+        margin: auto;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    #withLabels {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .smallInput {
+        margin-left: 6px;
+    }
+
+    #results {   
+        padding: 48px 0;
+    }
 }
