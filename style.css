@@ -44,6 +44,11 @@
     --dropShadow: #2b2b2b1a;
 }
 
+body {
+    background-color: var(--background);
+    color: var(--fontColor);
+}
+
 header {
     margin: 38px 38px 66px 38px;
 
@@ -53,24 +58,42 @@ header {
 }
 
 #switch {
+    background-color: var(--constrastColor);
+
+    cursor: pointer;
     display: flex;
-    justify-content: left;
     align-items: center;
 
     height: 40px;
-    width: 76px;
+    width: 80px;
     border-radius: 25px;
     margin-bottom: 38px;
+
+    position: relative;
 }
 
 #switch button {
+    background-color: var(--background);
+    
+    cursor: pointer;
+    border: none;
     width: 32px;
     height: 32px;
     margin: 4px;
     border-radius: 50%;
+
+    position: absolute; 
+    left: 0;
+    animation: none;
+}
+
+.light #switch button{
+    animation: slide .2s ease forwards;
 }
 
 header h1 {
+    color: var(--constrastColor);
+
     width: 100%;
     font-size: 3.5rem;
     text-align: center;
@@ -89,16 +112,40 @@ main {
 }
 
 input {
+    background-color: var(--input);
+    color: var(--fontColor);
+
     height: 40px;
     padding: 12px;
     border-radius: 16px;
+    border: none;
+    outline: none;
+    transition: color .3s ease,
+                background-color .3s ease;
+}
+
+input:focus {
+    transition: color .3s ease, background-color .3s ease;
+    color: var(--constrastColor);
+    background-color: var(--fontColor);
+}
+
+.light input:focus {
+    background-color: var(--input);
+    outline: 2px solid var(--constrastColor);
+}
+
+::-webkit-inner-spin-button { 
+  display: none;
 }
 
 ::-webkit-input-placeholder {
-    
+    color: var(--placehoder);
 }
 
 .opcional {
+    color: var(--instruction);
+
     display: flex;
     flex-direction: column;
     position: relative;
@@ -112,6 +159,8 @@ input {
 }
 
 #withLabels {
+    color: var(--constrastColor);
+
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -125,11 +174,14 @@ label {
 }
 
 .smallInput {
+    text-align: center;
     max-width: 130px;
     width: 30vw;
 }
 
 #results {
+    word-break: break-word;
+    max-width: 300px;
     display: flex;
     gap: 4px;
     justify-content: center;
@@ -142,10 +194,19 @@ label {
     font-size: 1.8rem;
 }
 
+#results i {
+    color: var(--constrastColor);
+    cursor: pointer;
+}
+
 #generate {
+    background-color: var(--constrastColor);
+    color: #ededed;
+
     width: 100%;
     max-width: 300px;
     margin: auto;
+    border: none;
     height: 60px;
     font-size: 1.8rem;
     border-radius: 24px;
@@ -182,7 +243,7 @@ label {
 
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 60%;
         transform: translateX(-50%) translateY(-50%);
     }
 
@@ -198,5 +259,25 @@ label {
 
     #results {   
         padding: 48px 0;
+        max-width: 600px;
+    }
+}
+
+/* Animations */
+@keyframes slide {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }

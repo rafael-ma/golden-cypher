@@ -8,7 +8,7 @@
 </head>
 <body class="">
     <header>
-        <div id="switch">
+        <div id="switch" onclick="toggleMode()">
             <button></button>
         </div>
         <h1>Golden Cypher</h1>
@@ -16,17 +16,17 @@
     </header>
 
     <main>
-        <input type="text" name="keyWord" id="keyWord" placeholder="PALAVRA-CHAVE">
+        <input type="text" name="keyWord" id="keyWord" placeholder="PALAVRA-CHAVE" title="Plavra-chave">
 
         <div class="opcional">
             <span>Opcional</span>
-            <input type="text" name="repositionKey" id="repositionKey" placeholder="CHAVE DE REPOSIÇÃO">
+            <input type="text" name="repositionKey" id="repositionKey" placeholder="CHAVE DE REPOSIÇÃO" title="Chave de reposição">
         </div>
 
         <div id="withLabels">
             <label for="caractersNumber">
                 NÚMERO DE CARACTERES:
-                <input class="smallInput" type="number" name="caractersNumber" id="caractersNumbers" min="1" autocomplete="off">
+                <input class="smallInput" type="number" name="caractersNumber" id="caractersNumbers" autocomplete="off">
             </label>
 
             <label for="specialCaracter">
@@ -39,13 +39,14 @@
         </div>
 
         <div id="results">
-            <p id="result">Sbhdet4vdtyl8td-</p>
-            <i class="fa-regular fa-copy"></i>
+            <p id="result">ABCDEFGHIJKLMNOPQRSTUVWXYZ012345</p>
+            <i class="fa-regular fa-copy" title="Copiar"></i>
         </div>
 
         <button id="generate">GERAR</button>
     </main>
 
     <script src="https://kit.fontawesome.com/236858bdbb.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
