@@ -84,7 +84,7 @@ header {
 
     position: absolute; 
     left: 0;
-    animation: none;
+    animation: slideOut .2s ease forwards;
 }
 
 .light #switch button{
