@@ -27,6 +27,7 @@
     --innerShadow2: #0000001a;
     --innerGlimmer: #ededed40;
     --dropShadow: #0000001a;
+    --hoverShadow: hsla(0, 0%, 0%, 0.4);
 }
 
 .light {
@@ -42,6 +43,8 @@
     --innerShadow2: #2b2b2b0d;
     --innerGlimmer: #ffffff40;
     --dropShadow: #2b2b2b1a;
+    --hoverShadow: #2b2b2b66;
+
 }
 
 body {
@@ -60,6 +63,12 @@ header {
 #switch {
     background-color: var(--constrastColor);
 
+    box-shadow: 
+        inset -1px -1px 6px -2px var(--innerGlimmer),
+        inset 1px 1px 6px var(--innerShadow),
+        inset 0 0 2px 1px var(--innerShadow),
+        2px 2px 6px var(--dropShadow);
+
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -75,6 +84,8 @@ header {
 #switch button {
     background-color: var(--background);
     
+    box-shadow: 2px 2px 6px var(--innerShadow);
+
     cursor: pointer;
     border: none;
     width: 32px;
@@ -93,6 +104,8 @@ header {
 
 header h1 {
     color: var(--constrastColor);
+
+    text-shadow: 2px 2px 2px var(--innerShadow);
 
     width: 100%;
     font-size: 3.5rem;
@@ -114,6 +127,12 @@ main {
 input {
     background-color: var(--input);
     color: var(--fontColor);
+
+    box-shadow: 
+        inset -1px -1px 6px -2px var(--innerGlimmer),
+        inset 1px 1px 6px var(--innerShadow2),
+        inset 0 0 2px 1px var(--innerShadow2),
+        2px 2px 6px var(--innerShadow2); 
 
     height: 40px;
     padding: 12px;
@@ -164,6 +183,8 @@ input:focus {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    margin-bottom: 24px;
 }
 
 label {
@@ -187,7 +208,7 @@ label {
     justify-content: center;
     align-items: center;
     
-    padding: 24px 0;
+    padding: 0 0 24px 0;
 }
 
 #results p, i{
@@ -202,6 +223,14 @@ label {
 #generate {
     background-color: var(--constrastColor);
     color: #ededed;
+
+    box-shadow: 
+        inset -1px -1px 6px -2px var(--innerGlimmer),
+        inset 1px 1px 6px var(--innerShadow2),
+        inset 0 0 2px 2px var(--innerShadow2),
+        2px 2px 6px var(--dropShadow);
+
+    transition: .3s ease;
 
     width: 100%;
     max-width: 300px;
@@ -260,6 +289,15 @@ label {
     #results {   
         padding: 48px 0;
         max-width: 600px;
+    }
+
+    #generate:hover {
+        transform: scale(1.1);
+        box-shadow: 
+            inset -1px -1px 6px -2px var(--innerGlimmer),
+            inset 1px 1px 6px var(--innerShadow2),
+            inset 0 0 2px 2px var(--innerShadow2),
+            8px 8px 10px 4px var(--hoverShadow);
     }
 }
 
