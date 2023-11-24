@@ -60,10 +60,50 @@ function specialCharacterValidator(specialCharacter){
     return error
 }
 
+function inputValidator(keyWord, repositionKey, charactersNumber, specialCharacter) {    
+    let values = [keyWord, repositionKey, charactersNumber, specialCharacter]
+    let valid = true
+
+    for (i = 0; i <= 4; i++) {
+        switch (i) {
+            case 1:
+                if (keyWordValidator(keyWord)) {
+                    i = 4
+                    valid = false
+                }
+                break
+
+            case 2:
+                if (repositionKeyValidator(repositionKey)) {
+                    i = 4
+                    valid = false
+                }
+                break
+
+            case 3:
+                if (charactersNumberValidator(charactersNumber)) {
+                    i = 4
+                    valid = false
+                }
+                break
+            
+            case 4:
+                if (specialCharacterValidator(specialCharacter)) {
+                    valid = false
+                }
+                break
+        }
+    }
+    return valid
+}
+
 function encript() {
     const keyWord = document.querySelector('#keyWord').value.toLowerCase()
     const repositionKey = document.querySelector('#repositionKey').value.toLowerCase()
     const charactersNumber = Number(document.querySelector('#charactersNumber').value)
     const specialCharacter = document.querySelector('#specialCharacter').value.toLowerCase()
-    specialCharacterValidator(specialCharacter)
+    
+    if (inputValidator(keyWord, repositionKey, charactersNumber, specialCharacter)) {
+        
+    }
 }
