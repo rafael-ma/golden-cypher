@@ -6,6 +6,8 @@ function toggleMode() {
     switchButton.animate('animation', 'slideOut .2s ease')
 }
 
+// Funções validadoras
+
 function keyWordValidator(keyWord) {
     if (keyWord == '') {
         alert('Você deve inserir uma palavra chave')
@@ -60,6 +62,8 @@ function specialCharacterValidator(specialCharacter){
     return error
 }
 
+// Validador de entrada
+
 function inputValidator(keyWord, repositionKey, charactersNumber, specialCharacter) {    
     let values = [keyWord, repositionKey, charactersNumber, specialCharacter]
     let valid = true
@@ -97,6 +101,25 @@ function inputValidator(keyWord, repositionKey, charactersNumber, specialCharact
     return valid
 }
 
+// Numerador
+
+function enumerate(keyWord, charactersNumber) {
+    if ((keyWord.length + 1) == charactersNumber) {
+        console.log('igual')
+    } else 
+    if ((keyWord.length + 1) < charactersNumber) {
+        console.log('menor')
+    } else {
+        console.log('maior')
+    }
+}
+
+// Codificação
+
+function encode(keyWord, repositionKey, charactersNumber, specialCharacter) {
+    enumerate(keyWord, charactersNumber)
+}
+
 function encript() {
     const keyWord = document.querySelector('#keyWord').value.toLowerCase()
     const repositionKey = document.querySelector('#repositionKey').value.toLowerCase()
@@ -104,6 +127,6 @@ function encript() {
     const specialCharacter = document.querySelector('#specialCharacter').value.toLowerCase()
     
     if (inputValidator(keyWord, repositionKey, charactersNumber, specialCharacter)) {
-        
+        encode(keyWord, repositionKey, charactersNumber, specialCharacter)
     }
 }
