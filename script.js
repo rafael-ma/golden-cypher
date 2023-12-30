@@ -105,10 +105,10 @@ function inputValidator(keyWord, repositionKey, charactersNumber, specialCharact
 
 function enumerate(keyWord, charactersNumber) {
     if ((keyWord.length + 1) == charactersNumber) {
-        console.log('igual')
+        return keyWord
     } else 
     if ((keyWord.length + 1) < charactersNumber) {
-        console.log('menor')
+        
     } else {
         console.log('maior')
     }
@@ -117,7 +117,8 @@ function enumerate(keyWord, charactersNumber) {
 // Codificação
 
 function encode(keyWord, repositionKey, charactersNumber, specialCharacter) {
-    enumerate(keyWord, charactersNumber)
+    let fullKeyWord = enumerate(keyWord, charactersNumber)
+    console.log(fullKeyWord)
 }
 
 function encript() {
